@@ -23,7 +23,11 @@ function Masthead() {
           </a>
           <nav className="hidden items-center gap-7 text-[11px] uppercase tracking-[0.18em] text-muted-foreground md:flex">
             {links.map((l) => (
-              <a key={l.href} href={l.href} className="transition-colors hover:text-ink">
+              <a
+                key={l.href}
+                href={l.href}
+                className="transition-colors hover:text-ink"
+              >
                 {l.label}
               </a>
             ))}
@@ -70,15 +74,17 @@ function Hero() {
           <Reveal delay={160}>
             <p className="mt-7 max-w-lg text-lg leading-relaxed text-muted-foreground">
               I copyedit academic research — the careful pass between an
-              accepted manuscript and a published article. Subject Matter
-              Expert for DOCX and LaTeX, leading a desk of 10–12 copyeditors,
-              around 300 pages a day.
+              accepted manuscript and a published article. Subject Matter Expert
+              for DOCX and LaTeX, leading a desk of 10–12 copyeditors, around
+              300 pages a day.
             </p>
           </Reveal>
           <Reveal delay={240}>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
-                href="mailto:ruchisingh.connect@gmail.com"
+                href="https://www.linkedin.com/in/ruchisingh-work/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex w-full items-center justify-center gap-2 bg-navy px-6 py-3.5 text-sm uppercase tracking-[0.14em] text-parchment transition-colors hover:bg-ink sm:w-auto"
               >
                 Get in touch
@@ -162,7 +168,11 @@ function Ticker() {
 function Numbers() {
   const stats = [
     { value: "300", unit: "pages/day", label: "copyedited, individually" },
-    { value: "150", unit: "articles/day", label: "delivered by the team I lead" },
+    {
+      value: "150",
+      unit: "articles/day",
+      label: "delivered by the team I lead",
+    },
     { value: "40%", unit: "quality lift", label: "measured through team KPIs" },
     { value: "80%", unit: "time saved", label: "per article, via automation" },
   ];
@@ -217,7 +227,10 @@ function Craft() {
     },
   ];
   return (
-    <section id="craft" className="mx-auto max-w-6xl scroll-mt-28 md:scroll-mt-20 px-6 py-16 sm:py-24 lg:py-28">
+    <section
+      id="craft"
+      className="mx-auto max-w-6xl scroll-mt-28 md:scroll-mt-20 px-6 py-16 sm:py-24 lg:py-28"
+    >
       <Opener number="i." title="What I do all day" />
       <div className="grid gap-12 md:grid-cols-3 md:gap-10">
         {crafts.map((c, i) => (
@@ -242,19 +255,39 @@ function Toolkit() {
   const groups = [
     {
       title: "Editing & styles",
-      items: ["APA · AMA · Harvard", "DOCX & LaTeX copyediting", "Proofreading & pre-editing", "Publishing compliance"],
+      items: [
+        "APA · AMA · Harvard",
+        "DOCX & LaTeX copyediting",
+        "Proofreading & pre-editing",
+        "Publishing compliance",
+      ],
     },
     {
       title: "Publishing systems",
-      items: ["Editorial Manager", "ScholarOne", "Scopus & Web of Science", "Abstracting & indexing"],
+      items: [
+        "Editorial Manager",
+        "ScholarOne",
+        "Scopus & Web of Science",
+        "Abstracting & indexing",
+      ],
     },
     {
       title: "Production & quality",
-      items: ["End-to-end journal management", "Production scheduling", "KPI tracking & publisher reports", "QA & query resolution"],
+      items: [
+        "End-to-end journal management",
+        "Production scheduling",
+        "KPI tracking & publisher reports",
+        "QA & query resolution",
+      ],
     },
     {
       title: "Tools",
-      items: ["Python", "Microsoft Word & Excel", "PowerPoint", "Common-error guides & training"],
+      items: [
+        "Python",
+        "Microsoft Word & Excel",
+        "PowerPoint",
+        "Common-error guides & training",
+      ],
     },
   ];
   return (
@@ -290,7 +323,10 @@ function Toolkit() {
 /* ————— The one project that deserves a spotlight ————— */
 function Showcase() {
   return (
-    <section id="project" className="scroll-mt-28 md:scroll-mt-20 border-y border-navy-deep bg-ink text-parchment">
+    <section
+      id="project"
+      className="scroll-mt-28 md:scroll-mt-20 border-y border-navy-deep bg-ink text-parchment"
+    >
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-24 lg:py-28">
         <div className="mb-12 flex items-baseline gap-5 border-b border-parchment/15 pb-6">
           <span className="font-serif text-5xl italic text-gold sm:text-6xl">
@@ -318,11 +354,11 @@ function Showcase() {
               </h3>
               <p className="mt-5 leading-relaxed text-parchment/75">
                 Every LaTeX article used to need the same slow, manual pass:
-                references, citations, title casing, validation. Ninety
-                minutes, gone. So I led the editorial side of a Python tool
-                built with a collaborator — defined the requirements, tested
-                every build against real manuscripts, and got the whole team
-                actually using it.
+                references, citations, title casing, validation. Ninety minutes,
+                gone. So I led the editorial side of a Python tool built with a
+                collaborator — defined the requirements, tested every build
+                against real manuscripts, and got the whole team actually using
+                it.
               </p>
               <p className="mt-4 leading-relaxed text-parchment/75">
                 Now the pass takes twenty minutes, and it&apos;s the project
@@ -358,7 +394,10 @@ function Process() {
     },
   ];
   return (
-    <section id="process" className="mx-auto max-w-6xl scroll-mt-28 md:scroll-mt-20 px-6 py-16 sm:py-24 lg:py-28">
+    <section
+      id="process"
+      className="mx-auto max-w-6xl scroll-mt-28 md:scroll-mt-20 px-6 py-16 sm:py-24 lg:py-28"
+    >
       <Opener number="iv." title="How I work" />
       <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
         {steps.map((s, i) => (
@@ -407,7 +446,9 @@ function Story() {
                   <p className="font-serif text-xl italic leading-snug text-gold">
                     {c.when}
                   </p>
-                  <p className={`leading-relaxed text-muted-foreground ${i === 0 ? "dropcap" : ""}`}>
+                  <p
+                    className={`leading-relaxed text-muted-foreground ${i === 0 ? "dropcap" : ""}`}
+                  >
                     {c.text}
                   </p>
                 </article>
@@ -483,7 +524,10 @@ function Credentials() {
     },
   ];
   return (
-    <section id="credentials" className="mx-auto max-w-6xl scroll-mt-28 md:scroll-mt-20 px-6 py-16 sm:py-24 lg:py-28">
+    <section
+      id="credentials"
+      className="mx-auto max-w-6xl scroll-mt-28 md:scroll-mt-20 px-6 py-16 sm:py-24 lg:py-28"
+    >
       <Opener number="vi." title="Credentials" />
       <div className="grid gap-14 md:grid-cols-2 md:gap-10">
         <Reveal>
@@ -534,28 +578,56 @@ function Credentials() {
 /* ————— Big friendly contact, signed like a letter ————— */
 function Hello() {
   return (
-    <footer id="hello" className="texture-paper scroll-mt-28 md:scroll-mt-20 border-t border-border">
+    <footer
+      id="hello"
+      className="texture-paper scroll-mt-28 md:scroll-mt-20 border-t border-border"
+    >
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-24 lg:py-28">
         <Reveal>
-          <p className="font-serif text-lg italic text-gold">
-            Enough about me —
-          </p>
-          <h2 className="mt-3 font-serif text-[clamp(3rem,9vw,6.5rem)] leading-[0.95] tracking-tight text-ink">
-            Say hello<span className="text-gold">.</span>
-          </h2>
-          <a
-            href="mailto:ruchisingh.connect@gmail.com"
-            className="mt-8 inline-block break-all font-serif text-lg italic text-navy underline decoration-gold decoration-2 underline-offset-8 transition-colors hover:text-ink sm:break-normal sm:text-2xl"
-          >
-            ruchisingh.connect@gmail.com
-          </a>
-          <p className="mt-6 text-sm text-muted-foreground">
-            or ring +91 96675 05867 · New Delhi, India
-          </p>
+          <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
+            {/* Left — heading + contact */}
+            <div className="lg:max-w-xl">
+              <p className="font-serif text-lg italic text-gold">
+                Enough about me —
+              </p>
+              <h2 className="mt-3 font-serif text-[clamp(3rem,9vw,6.5rem)] leading-[0.95] tracking-tight text-ink">
+                Say hello<span className="text-gold">.</span>
+              </h2>
+              <a
+                href="https://www.linkedin.com/in/ruchisingh-work/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-block break-all font-serif text-lg italic text-navy underline decoration-gold decoration-2 underline-offset-8 transition-colors hover:text-ink sm:break-normal sm:text-2xl"
+              >
+                Connect on LinkedIn
+              </a>
+              <p className="mt-6 text-sm text-muted-foreground">
+                or ring +91 96675 05867 · New Delhi, India
+              </p>
+            </div>
+
+            {/* Right — LinkedIn badge */}
+            <div className="flex-shrink-0">
+              <div
+                className="badge-base LI-profile-badge"
+                data-locale="en_US"
+                data-size="large"
+                data-theme="light"
+                data-type="HORIZONTAL"
+                data-vanity="ruchisingh-work"
+                data-version="v1"
+              ></div>
+            </div>
+          </div>
         </Reveal>
         <div className="mt-20 flex flex-col gap-2 border-t border-border pt-8 text-xs text-muted-foreground sm:flex-row sm:items-baseline sm:justify-between">
-          <span>© {new Date().getFullYear()} Ruchi Singh — edited, naturally, by hand</span>
-          <span className="font-serif italic">Set in Fraunces &amp; Instrument Sans</span>
+          <span>
+            © {new Date().getFullYear()} Ruchi Singh — edited, naturally, by
+            hand
+          </span>
+          <span className="font-serif italic">
+            Set in Fraunces &amp; Instrument Sans
+          </span>
         </div>
       </div>
     </footer>
@@ -564,7 +636,10 @@ function Hello() {
 
 export default function Home() {
   return (
-    <div id="top" className="texture-paper flex flex-1 flex-col overflow-x-clip">
+    <div
+      id="top"
+      className="texture-paper flex flex-1 flex-col overflow-x-clip"
+    >
       <Masthead />
       <main>
         <Hero />
