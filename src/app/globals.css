@@ -97,6 +97,14 @@
     background-size: 14px 14px;
   }
 
+  /* Swipeable strips (mobile nav) without a visible scrollbar */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
   /* Manuscript rule — thin double line under section labels */
   .rule-double {
     border-bottom: 1px solid var(--border);

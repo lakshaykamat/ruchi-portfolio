@@ -16,23 +16,36 @@ function Masthead() {
   ];
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-3.5">
-        <a href="#top" className="font-serif text-lg tracking-tight text-ink">
-          Ruchi Singh<span className="text-gold">.</span>
-        </a>
-        <nav className="hidden items-center gap-7 text-[11px] uppercase tracking-[0.18em] text-muted-foreground md:flex">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="flex items-center justify-between gap-6 py-3.5">
+          <a href="#top" className="font-serif text-lg tracking-tight text-ink">
+            Ruchi Singh<span className="text-gold">.</span>
+          </a>
+          <nav className="hidden items-center gap-7 text-[11px] uppercase tracking-[0.18em] text-muted-foreground md:flex">
+            {links.map((l) => (
+              <a key={l.href} href={l.href} className="transition-colors hover:text-ink">
+                {l.label}
+              </a>
+            ))}
+          </nav>
+          <a
+            href="#hello"
+            className="text-[11px] uppercase tracking-[0.18em] text-ink underline decoration-gold decoration-2 underline-offset-4 transition-colors hover:text-navy"
+          >
+            Say hello
+          </a>
+        </div>
+        <nav className="no-scrollbar -mx-6 flex gap-6 overflow-x-auto border-t border-border px-6 py-2.5 text-[11px] uppercase tracking-[0.18em] text-muted-foreground md:hidden">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="transition-colors hover:text-ink">
+            <a
+              key={l.href}
+              href={l.href}
+              className="whitespace-nowrap py-0.5 transition-colors hover:text-ink"
+            >
               {l.label}
             </a>
           ))}
         </nav>
-        <a
-          href="#hello"
-          className="text-[11px] uppercase tracking-[0.18em] text-ink underline decoration-gold decoration-2 underline-offset-4 transition-colors hover:text-navy"
-        >
-          Say hello
-        </a>
       </div>
     </header>
   );
@@ -40,8 +53,8 @@ function Masthead() {
 
 function Hero() {
   return (
-    <section className="mx-auto max-w-6xl px-6 pt-16 sm:pt-24">
-      <div className="grid items-center gap-12 lg:grid-cols-[1fr_auto] lg:gap-20">
+    <section className="mx-auto max-w-6xl px-6 pt-12 sm:pt-20 lg:pt-24">
+      <div className="grid items-center gap-14 lg:grid-cols-[1fr_auto] lg:gap-20">
         <div>
           <Reveal>
             <p className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
@@ -66,7 +79,7 @@ function Hero() {
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
                 href="mailto:ruchi.singh.editorial@gmail.com"
-                className="inline-flex items-center gap-2 bg-navy px-6 py-3 text-sm uppercase tracking-[0.14em] text-parchment transition-colors hover:bg-ink"
+                className="inline-flex w-full items-center justify-center gap-2 bg-navy px-6 py-3.5 text-sm uppercase tracking-[0.14em] text-parchment transition-colors hover:bg-ink sm:w-auto"
               >
                 Get in touch
                 <ArrowRight className="size-4 text-gold" />
@@ -135,7 +148,7 @@ function Ticker() {
     </div>
   );
   return (
-    <div className="marquee mt-16 border-y border-border bg-card py-3 sm:mt-24">
+    <div className="marquee mt-14 border-y border-border bg-card py-3 sm:mt-24">
       <div className="marquee-track" aria-hidden>
         {strip}
         {strip}
@@ -204,7 +217,7 @@ function Craft() {
     },
   ];
   return (
-    <section id="craft" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-24 sm:py-28">
+    <section id="craft" className="mx-auto max-w-6xl scroll-mt-28 md:scroll-mt-20 px-6 py-16 sm:py-24 lg:py-28">
       <Opener number="i." title="What I do all day" />
       <div className="grid gap-12 md:grid-cols-3 md:gap-10">
         {crafts.map((c, i) => (
@@ -246,7 +259,7 @@ function Toolkit() {
   ];
   return (
     <section id="toolkit" className="border-y border-border bg-card">
-      <div className="mx-auto max-w-6xl scroll-mt-20 px-6 py-24 sm:py-28">
+      <div className="mx-auto max-w-6xl scroll-mt-28 md:scroll-mt-20 px-6 py-16 sm:py-24 lg:py-28">
         <Opener number="ii." title="The toolkit" />
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {groups.map((g, i) => (
@@ -277,8 +290,8 @@ function Toolkit() {
 /* ————— The one project that deserves a spotlight ————— */
 function Showcase() {
   return (
-    <section id="project" className="scroll-mt-20 border-y border-navy-deep bg-ink text-parchment">
-      <div className="mx-auto max-w-6xl px-6 py-24 sm:py-28">
+    <section id="project" className="scroll-mt-28 md:scroll-mt-20 border-y border-navy-deep bg-ink text-parchment">
+      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-24 lg:py-28">
         <div className="mb-12 flex items-baseline gap-5 border-b border-parchment/15 pb-6">
           <span className="font-serif text-5xl italic text-gold sm:text-6xl">
             iii.
@@ -345,7 +358,7 @@ function Process() {
     },
   ];
   return (
-    <section id="process" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-24 sm:py-28">
+    <section id="process" className="mx-auto max-w-6xl scroll-mt-28 md:scroll-mt-20 px-6 py-16 sm:py-24 lg:py-28">
       <Opener number="iv." title="How I work" />
       <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
         {steps.map((s, i) => (
@@ -384,7 +397,7 @@ function Story() {
   ];
   return (
     <section id="story" className="border-t border-border bg-card">
-      <div className="mx-auto max-w-6xl scroll-mt-20 px-6 py-24 sm:py-28">
+      <div className="mx-auto max-w-6xl scroll-mt-28 md:scroll-mt-20 px-6 py-16 sm:py-24 lg:py-28">
         <Opener number="v." title="The story so far" />
         <div className="grid gap-16 lg:grid-cols-[1fr_auto] lg:gap-20">
           <div className="max-w-2xl space-y-12">
@@ -470,7 +483,7 @@ function Credentials() {
     },
   ];
   return (
-    <section id="credentials" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-24 sm:py-28">
+    <section id="credentials" className="mx-auto max-w-6xl scroll-mt-28 md:scroll-mt-20 px-6 py-16 sm:py-24 lg:py-28">
       <Opener number="vi." title="Credentials" />
       <div className="grid gap-14 md:grid-cols-2 md:gap-10">
         <Reveal>
@@ -521,8 +534,8 @@ function Credentials() {
 /* ————— Big friendly contact, signed like a letter ————— */
 function Hello() {
   return (
-    <footer id="hello" className="texture-paper scroll-mt-20 border-t border-border">
-      <div className="mx-auto max-w-6xl px-6 py-24 sm:py-28">
+    <footer id="hello" className="texture-paper scroll-mt-28 md:scroll-mt-20 border-t border-border">
+      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-24 lg:py-28">
         <Reveal>
           <p className="font-serif text-lg italic text-gold">
             Enough about me —
@@ -532,7 +545,7 @@ function Hello() {
           </h2>
           <a
             href="mailto:ruchi.singh.editorial@gmail.com"
-            className="mt-8 inline-block font-serif text-xl italic text-navy underline decoration-gold decoration-2 underline-offset-8 transition-colors hover:text-ink sm:text-2xl"
+            className="mt-8 inline-block break-all font-serif text-lg italic text-navy underline decoration-gold decoration-2 underline-offset-8 transition-colors hover:text-ink sm:break-normal sm:text-2xl"
           >
             ruchi.singh.editorial@gmail.com
           </a>
@@ -551,7 +564,7 @@ function Hello() {
 
 export default function Home() {
   return (
-    <div id="top" className="texture-paper flex flex-1 flex-col">
+    <div id="top" className="texture-paper flex flex-1 flex-col overflow-x-clip">
       <Masthead />
       <main>
         <Hero />
