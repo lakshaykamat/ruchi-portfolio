@@ -1,6 +1,6 @@
 **RUCHI SINGH**
 
-New Delhi, India | \+91 96675 05867 |   [ruchi.singh.editorial@gmail.com](mailto:ruchi.singh.editorial@gmail.com)
+New Delhi, India | \+91 96675 05867 |   [ruchisingh.connect@gmail.com](mailto:ruchisingh.connect@gmail.com)
 
 # **PROFESSIONAL SUMMARY**
 

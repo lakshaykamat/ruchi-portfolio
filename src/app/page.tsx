@@ -78,7 +78,7 @@ function Hero() {
           <Reveal delay={240}>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
-                href="mailto:ruchi.singh.editorial@gmail.com"
+                href="mailto:ruchisingh.connect@gmail.com"
                 className="inline-flex w-full items-center justify-center gap-2 bg-navy px-6 py-3.5 text-sm uppercase tracking-[0.14em] text-parchment transition-colors hover:bg-ink sm:w-auto"
               >
                 Get in touch
@@ -544,10 +544,10 @@ function Hello() {
             Say hello<span className="text-gold">.</span>
           </h2>
           <a
-            href="mailto:ruchi.singh.editorial@gmail.com"
+            href="mailto:ruchisingh.connect@gmail.com"
             className="mt-8 inline-block break-all font-serif text-lg italic text-navy underline decoration-gold decoration-2 underline-offset-8 transition-colors hover:text-ink sm:break-normal sm:text-2xl"
           >
-            ruchi.singh.editorial@gmail.com
+            ruchisingh.connect@gmail.com
           </a>
           <p className="mt-6 text-sm text-muted-foreground">
             or ring +91 96675 05867 · New Delhi, India
